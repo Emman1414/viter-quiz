@@ -1,14 +1,14 @@
 export const questions = [
   {
     question_aid: 1,
-    question_question: "Q1: Pogi ba ako?",
+    question_question: "Q1: Makaka-graduate ba ako?",
     choices: [
       {
         choice: "Pwede",
         isCorrect: false,
       },
       {
-        choice: "Oo",
+        choice: "Oo namn",
         isCorrect: true,
       },
       {
@@ -111,7 +111,7 @@ export const questions = [
   },
   {
     question_aid: 6,
-    question_question: "Q6: Uulan ba ako mamaya?",
+    question_question: "Q6: Uulan ba mamaya?",
     choices: [
       {
         choice: "Nice",
