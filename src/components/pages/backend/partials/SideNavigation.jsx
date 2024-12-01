@@ -13,12 +13,12 @@ const SideNavigation = ({ menu }) => {
       slug: "/admin/question",
       icon: <Megaphone size={16} />,
     },
-    
   ];
+
   return (
     <>
       <aside className="p-4 border-r border-line">
-        <h1>Quiz</h1>
+        <h1 className="text-center font-bold text-4xl">QUIZ</h1>
 
         <nav>
           <ul className="mt-10">
@@ -26,14 +26,14 @@ const SideNavigation = ({ menu }) => {
               <li
                 className={`${
                   menu === item.slug.replaceAll("/admin/", "")
-                    ? "border-accent bg-accent bg-opacity-100 text-white"
+                    ? "border-accent bg-accent opacity-100 text-white"
                     : ""
-                } p-2 py-2 mb-2 rounded-md border border-transparent opacity-60 hover:opacity-100`}
+                } p-2 mb-2 border border-transparent rounded-md opacity-60 hover:opacity-100`}
                 key={key}
               >
                 <NavLink
                   to={`${item.slug}`}
-                  className="flex gap-2 text-base items-center"
+                  className="flex gap-3  items-center"
                 >
                   {item.icon}
                   {item.title}

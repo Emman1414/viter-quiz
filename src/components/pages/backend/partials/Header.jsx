@@ -1,6 +1,5 @@
-import { Moon, Settings, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Header = ({ title = "", subtitle = "" }) => {
   const [isDark, setIsDark] = React.useState(
@@ -31,39 +30,39 @@ const Header = ({ title = "", subtitle = "" }) => {
   }, [theme]);
 
   return (
-    <header>
-      <div className="flex justify-between items-center p-4">
-        <div className="[&>*]:mb-0 ">
-          <h4>{title}</h4>
-          <p>{subtitle}</p>
-        </div>
+    <>
+      <header className="bg-secondary">
+        <div className="flex justify-between items-center p-4">
+          <div className="[&>*]:mb-0 ">
+            <h4>{title}</h4>
+            <p>{subtitle}</p>
+          </div>
 
-        <div className="flex items-center gap-6">
-          <span>
+          <div className="flex items-center gap-6">
             <button
-              className="h-[20px] w-[45px] bg-primary rounded-2xl border border-line px-[2px] transition-all duration-500"
+              className="h-[20px] w-[45px] bg-primary rounded-2xl border border-line  px-[2px] hover:border-accent transition-all duration-200"
               onClick={handleTheme}
             >
               <span
                 className={`${
                   isDark ? "" : "translate-x-6"
-                } size-[16px] rounded-full bg-secondary block grid place-content-center transition-all`}
+                } size-[16px] rounded-full bg-secondary grid place-content-center transition-all duration-500`}
               >
                 {isDark ? (
-                  <Sun size={14} stroke={"white"} />
+                  <Sun size={14} stroke="white" />
                 ) : (
-                  <Moon size={14} stroke={"black"} />
+                  <Moon size={14} stroke="black" />
                 )}
               </span>
             </button>
-          </span>
 
-          <button className="size-[30px] rounded-full bg-accent grid place-content-center text-white">
-            A
-          </button>
+            <button className="size-[30px] rounded-full bg-accent grid place-content-center text-white">
+              A
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

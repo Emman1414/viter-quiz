@@ -1,8 +1,8 @@
 import React from "react";
+import { StoreProvider } from "./components/store/storeContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Quiz from "./components/pages/frontend/Quiz";
-import { StoreProvider } from "./components/store/storeContext";
-import Question from "./components/pages/backend/questions/Question";
+import Question from "./components/pages/backend/question/Question";
 
 const App = () => {
   return (

@@ -1,15 +1,15 @@
 export const questions = [
   {
     question_aid: 1,
-    question_question: "Q1: May pera ba ako?",
+    question_question: "Q1: Makaka-graduate ba ako?",
     choices: [
       {
         choice: "Pwede",
         isCorrect: false,
       },
       {
-        choice: "Oo",
-        isCorrect: false,
+        choice: "Oo namn",
+        isCorrect: true,
       },
       {
         choice: "Cguro",

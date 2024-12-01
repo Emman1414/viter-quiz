@@ -1,6 +1,7 @@
 import { questions } from "@/questions";
 import React from "react";
 
+
 const Quiz = () => {
   const [isShowSummary, setIsShowSummary] = React.useState(false);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);

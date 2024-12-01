@@ -1,3 +1,5 @@
+import { StoreContext } from "@/components/store/storeContext";
+import React from "react";
 
 const LoadMore = () => {
   return (
