@@ -18,7 +18,7 @@ const ToastSuccess = () => {
       p-1.5 px-2.5 rounded-md"
       >
         <CheckCircle size={16} />
-        Record Successfully {store.message}!
+        {store.message}!
       </div>
     </>
   );

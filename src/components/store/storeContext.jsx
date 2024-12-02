@@ -7,6 +7,7 @@ const initVal = {
   success: false,
   validate: false,
   message: "",
+  name: "",
   isSave: false,
   isConfirm: false,
   isArchive: false,

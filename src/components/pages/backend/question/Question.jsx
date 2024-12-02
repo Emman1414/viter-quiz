@@ -8,12 +8,16 @@ import QuestionTable from "./QuestionTable";
 import { StoreContext } from "@/components/store/storeContext";
 import { setIsAdd } from "@/components/store/storeAction";
 import ModalAddQuestion from "./ModalAddQuestion";
+import ToastSuccess from "../partials/ToastSuccess";
 
 const Question = () => {
   const { dispatch, store } = React.useContext(StoreContext);
 
+  const [itemEdit, setItemEdit] = React.useState(null);
+
   const handleAdd = () => {
     dispatch(setIsAdd(true));
+    setItemEdit(null);
   };
 
   return (
@@ -31,7 +35,7 @@ const Question = () => {
                 </button>
               </div>
 
-              <QuestionTable />
+              <QuestionTable setItemEdit={setItemEdit} />
             </div>
 
             <Footer />
@@ -40,8 +44,8 @@ const Question = () => {
       </section>
       {store.validate && <ModalValidatioN />}
       {store.error && <ModalErroR />}
-      {store.success && <ToastSuccesS />}
-      {store.isAdd && <ModalAddQuestion />}
+      {store.success && <ToastSuccess />}
+      {store.isAdd && <ModalAddQuestion itemEdit={itemEdit} />}
     </>
   );
 };

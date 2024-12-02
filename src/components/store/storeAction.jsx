@@ -19,6 +19,13 @@ export const setMessage = (val) => {
   };
 };
 
+export const setName = (val) => {
+  return {
+    type: "NAME",
+    payload: val,
+  };
+};
+
 export const setValidate = (val) => {
   return {
     type: "VALIDATE",
