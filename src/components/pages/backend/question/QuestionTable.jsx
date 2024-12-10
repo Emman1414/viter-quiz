@@ -1,19 +1,18 @@
-import { Archive, ArchiveRestore, FilePenLine, Trash2 } from "lucide-react";
-import React from "react";
-import Pills from "../partials/Pills";
-import LoadMore from "../partials/LoadMore";
-import SpinnerTable from "../partials/spinners/SpinnerTable";
-import IconServerError from "../partials/IconServerError";
-import TableLoader from "../partials/TableLoader";
-import IconNoData from "../partials/IconNoData";
-import { StoreContext } from "@/components/store/storeContext";
 import {
   setIsAdd,
   setIsConfirm,
   setIsDelete,
 } from "@/components/store/storeAction";
-import ModalDelete from "../partials/modals/ModalDelete";
+import { StoreContext } from "@/components/store/storeContext";
+import { Archive, ArchiveRestore, FilePenLine, Trash2 } from "lucide-react";
+import React from "react";
+import IconNoData from "../partials/IconNoData";
+import IconServerError from "../partials/IconServerError";
 import ModalConfirm from "../partials/modals/ModalConfirm";
+import ModalDelete from "../partials/modals/ModalDelete";
+import Pills from "../partials/Pills";
+import SpinnerTable from "../partials/spinners/SpinnerTable";
+import TableLoader from "../partials/TableLoader";
 import useQueryData from "@/components/custom-hook/useQueryData";
 
 const QuestionTable = ({ setItemEdit }) => {
