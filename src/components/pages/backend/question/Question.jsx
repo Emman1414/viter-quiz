@@ -44,7 +44,7 @@ const Question = () => {
       </section>
       {store.validate && <ModalValidatioN />}
       {store.error && <ModalErroR />}
-      {store.success && <ToastSuccess />}
+      {/* {store.success && <ToastSuccess />} */}
       {store.isAdd && <ModalAddQuestion itemEdit={itemEdit} />}
     </>
   );

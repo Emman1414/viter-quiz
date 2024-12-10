@@ -9,8 +9,8 @@ import Welcome from "./components/pages/frontend/Welcome";
 const App = () => {
   const queryClient = new QueryClient();
 
-  return (
-    <QueryClientProvider client={queryClient}>
+  return (  
+    <QueryClientProvider  >
       <StoreProvider>
         <Router>
           <Routes>

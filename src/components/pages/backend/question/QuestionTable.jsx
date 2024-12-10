@@ -1,9 +1,9 @@
 import { Archive, ArchiveRestore, FilePenLine, Trash2 } from "lucide-react";
 import React from "react";
 import Pills from "../partials/Pills";
-import IconServerError from "../partials/IconServerError";
 import LoadMore from "../partials/LoadMore";
 import SpinnerTable from "../partials/spinners/SpinnerTable";
+import IconServerError from "../partials/IconServerError";
 import TableLoader from "../partials/TableLoader";
 import IconNoData from "../partials/IconNoData";
 import { StoreContext } from "@/components/store/storeContext";
@@ -69,6 +69,16 @@ const QuestionTable = ({ setItemEdit }) => {
               </tr>
             </thead>
             <tbody>
+              {/* <tr>
+                <td colSpan={100}>
+                  <IconNoData />
+                </td>
+              </tr>
+              <tr>
+                <td colSpan={100}>
+                  <IconServerError />
+                </td>
+              </tr> */}
               {((isLoading && !isFetching) || result?.data.length === 0) && (
                 <tr>
                   <td colSpan="100%">
